@@ -1,0 +1,5 @@
+**** HELLO DJANGO ****
+
+* Entender o básico do arquivo urls.py;
+* HTTP Request e HTTP Response;
+* Ler comentários no arquivo urls.py

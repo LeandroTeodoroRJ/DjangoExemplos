@@ -1,0 +1,11 @@
+***** CARREGAR UM TEMPLATE HTML ****
+
+* Utilizar o django para rendernizar um arquivo html
+* Criar dentro da pasta do app uma pasta com nome templates, essa pasta já é automaticamente indexada pelo django.
+* Para evitar conflitos entre nomes iguais de arquivos html, dentro da pasta templates do App crie uma outra
+pasta com o nome que tenha referência ao App.
+Para esse exemplo: .../app_html/templates/app_html
+* Para que o django reconheça o App criado é necessário alterar o arquivo settings.py do projeto e incluir
+o nome do App na lista em INSTALLED_APPS
+* Então, agora o arquivo views.py aponta para um arquivo html.
+* Leia os arquivos citados.

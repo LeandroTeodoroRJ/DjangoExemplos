@@ -1,0 +1,18 @@
+**** UTILIZANDO APPS ****
+
+* Um App no Django é uma pasta separada a fim de alocar informações de uma página do site.
+* Para iniciar um novo App no projeto:
+    $python manage.py startapp <nome do app>
+    Onde o nome do App também será o nome da pasta criada.
+* Dentro da pasta do App existe um arquivo views.py onde são criadas as views para que 
+não fiquem no arquivo urls.py (o que é errado).
+* Todas as partes interrelacionadas ou trechos interligados do site devem 
+estar dentro do mesmo App.
+* Ainda é possível separar cada view em um arquivo em separado, facilitando o desenvolvimento
+em grupo.
+* Leia os comentários do arquivo urls.py e meu_app/urls.py
+
+Em Resumo:
+urls.py - Aponta para o arquivo de urls do App
+meu_app/urls.py - Aponta para o arquivo das views do App
+meu_app/views.py - Arquivo de administração das views do App

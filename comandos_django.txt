@@ -1,0 +1,18 @@
+INSTALAÇÃO DO DJANGO
+$pip install django
+
+ALGUNS COMANDOS DO DJANGO
+Ver a versão do Django instalada
+$django-admin --version
+
+Iniciar um projeto
+$django-admin startproject <nome da pasta do projeto> .
+OBS: Atenção para o ponto no final da linha para a criação da pasta
+     do projeto na raiz.
+     
+Iniciar o servidor Web do Django
+$python manage.py runserver  
+
+Iniciar um novo App
+$python manage.py startapp <nome do app>
+

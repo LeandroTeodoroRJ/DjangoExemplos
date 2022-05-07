@@ -1,0 +1,16 @@
+ATUALIZAÇÕES E PACOTES NECESSÁRIOS
+$pip install pip --upgrade
+$pip install django
+$pip install pytest
+
+
+COMANDOS DA VURTUAL MACHINE PYTHON
+Criação do Ambiente Virtual. 
+$python3 -m venv <nome da pasta da máquina virtual>
+
+Ativação do ambiente virtual
+#source <nome da pasta>/bin/activate
+
+Para desativar a VM
+$deactivate
+

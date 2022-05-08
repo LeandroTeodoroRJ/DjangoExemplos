@@ -16,3 +16,5 @@ $python manage.py runserver
 Iniciar um novo App
 $python manage.py startapp <nome do app>
 
+Realiza a junção dos arquivos estáticos
+$python manage.py collectstatic

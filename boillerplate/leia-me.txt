@@ -20,9 +20,11 @@ manage.py - Arquivo que tem a mesma função do comando djando-admin, antes da e
 > <App> - Pasta do App 
 > viwes.py - Arquivo de renderização das páginas (views)
 > urls.py - Arquivo que importas as funções das viwes e interliga ao dominio url do App
->> <template> - Pasta com templates html
+>> <static> - Pasta com os arquivos estáticos do App (utilizar namespace)
+>> <template> - Pasta com templates html (utilizar namespace)
 >>> <partials> - Pasta com códigos parciais html
 >>> <pages> - Pasta com as páginas html
+> <base_static/global> - Pasta com os tipos de arquivos estáticos globais
 
 
 ROTEIRO CRIAÇÃO DE PROJETO

@@ -1,0 +1,28 @@
+{% load static  %}  <!-- 
+                    Comando Django para carregamento de arquivos estáticos.  
+                    Essa linha carrega o caminho até a pasta static do app,
+                    conforme definido no arquivo settings.py na linha
+                    STATIC_URL = '/static/'
+                    -->                    
+
+<!DOCTYPE html>  
+<html lang="pt-BR">
+    <head>  
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title> Django </title>
+
+        <!--Tag link para o arquivo estático, note que não há a tag style -->
+        <link rel="stylesheet" href="{% static 'app_main/css/styles.css' %}"> 
+
+        <!--Tag link para o arquivo estático global, note que não há a tag style -->
+        <link rel="stylesheet" href="{% static 'global/css/global-styles.css' %}"> 
+
+    </head> 
+    <body>
+        <div class="main_box">
+            <h1>Django Arquivos Estáticos</h1>
+        </div>
+    </body>
+</html>
+

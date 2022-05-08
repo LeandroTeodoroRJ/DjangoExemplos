@@ -1,0 +1,41 @@
+****** ARQUIVOS ESTÁTICOS NO DJANGO *******
+
+Arquivos estáticos são arquivos que são entregues exatamente como estão salvos. 
+Esses arquivos quase não sofrem alterações, por isso, o navegador pode salvá-los 
+em cache para que o conteúdo da página carregue mais rapidamente para o usuário final. 
+Alguns provedores de Internet também adicionam servidores no meio da rede que 
+também podem fazer cache desse arquivos, assim o próprio provedor economiza sua 
+banda de Internet externa.
+
+Frequentemente, sites adicionam seu conteúdo estático em CDNs (Content Delivery Network) 
+que são servidores otimizados para entrega de arquivos estáticos tanto em velocidade 
+de entrega quando em manter os arquivos na localização mais próxima do usuário final.
+
+Alguns tipos de arquivos que podem ser considerados estáticos: imagens, vídeos, 
+HTML, CSS, JavaScript, arquivos para download e assim por diante.
+
+Os arquivos estáticos estão armazenados em 
+<pasta_app>/static/<namespace>/<tipo>
+
+Para configurar o Django para ler os arquivos estáticos é necessário alterar
+o arquivo settings.py
+Em Installed Apps deve haver a linha: 'django.contrib.staticfiles',
+e também a definição do caminho em STATIC_URL
+
+Para arquivos estáticos que não estão ligados a nenhum App em específico
+podem ser alocados, por exemplo, na pasta:
+<base_static/<global>/<tipo>
+Entretanto a pasta deve ser mapeada no seeting.py pela lista STATICFILES_DIRS
+
+A junção dos arquivos estáticos para envio ao servidor é feito pelo comando
+$python manage.py collectstatic
+É necessário em settings.py indicar o caminho em STATIC_ROOT.
+Antes da realização do comando veja se os arquivos estão organizados com
+name space a fim de evitar colisões.
+
+Leia:
+home.html
+styles.css
+settings.py
+global-styles.css
+sttings.py

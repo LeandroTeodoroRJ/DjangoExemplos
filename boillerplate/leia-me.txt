@@ -25,7 +25,7 @@ manage.py - Arquivo que tem a mesma função do comando djando-admin, antes da e
 >>> <partials> - Pasta com códigos parciais html
 >>> <pages> - Pasta com as páginas html
 > <base_static/global> - Pasta com os tipos de arquivos estáticos globais
-
+> <base_templates/global> - Pasta com os tipos de arquivos templates globais
 
 ROTEIRO CRIAÇÃO DE PROJETO
 1 - Criar a pasta do projeto e a máquina virtual

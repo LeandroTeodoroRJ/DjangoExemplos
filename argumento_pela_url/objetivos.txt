@@ -1,0 +1,11 @@
+***** PASSAR UM ARGUMENTO PELA URL *****
+
+Uma função da view pode receber um argumento passado pela 
+url do navegador.
+
+
+Leia:
+app_main/urls.py
+app_main/views.py
+home.html
+https://docs.djangoproject.com/pt-br/3.2/topics/http/urls/

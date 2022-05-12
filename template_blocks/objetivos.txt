@@ -1,0 +1,14 @@
+***** HERANÇA DE TEMPLATES E USO DO TEMPLATE BLOCK ******
+
+No django é possível aproveitar uma estrutura já criada em html
+que servirá como base. No template base é indicado onde os códigos
+adicionais serão inseridos e o template base é declarado como 
+um bloco.
+O bloco é demarcado com a tag  {% block conteudo_base  %} e 
+sua tag de fechamento.
+
+Leia:
+home.html
+base.html
+settings.py
+

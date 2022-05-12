@@ -55,9 +55,7 @@ ROOT_URLCONF = 'pjt_main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR/'base_templates',     #Pasta de templates base adicionada ao path
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

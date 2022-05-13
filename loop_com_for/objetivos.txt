@@ -1,0 +1,13 @@
+**** LOOP COM FOR NO TEMPLATE *****
+
+O for no django funciona de forma semelhante ao
+executado no python. O loop deve ficar limitado
+entre as tags:
+
+{% for <variável> in <lista> %}
+    <código html>
+{% endfor %}
+
+Leia:
+home.html
+view.py

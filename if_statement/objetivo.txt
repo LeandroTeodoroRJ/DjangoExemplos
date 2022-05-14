@@ -1,0 +1,15 @@
+****** ESTUDO DA CLÁUSULA IF NO TEMPLATE DJANGO *****
+
+No django usa-se o if de forma parecida ao utilizado no
+python. Para isso são utilizadas as tags como demarcador.
+
+{% if <operador> (condição) %}
+    <bloco html>
+{% else %}
+    <bloco html>
+{% endif %}
+
+Leia:
+view.py
+home.html
+

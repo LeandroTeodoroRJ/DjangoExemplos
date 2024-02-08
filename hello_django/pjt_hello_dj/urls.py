@@ -17,12 +17,18 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse  #Módulo Http Response incluído
 
-def minha_view(request):     #Essa função não fica neste arquivo, está aqui somente por exemplo
-    return HttpResponse('Hello Django')
+#Essa função não fica neste arquivo, está aqui somente por exemplo
+def minha_view(request):
+    return HttpResponse('Hello Django')  #retorna um HTTP response 
 
+def view_inicial(request):
+    return HttpResponse('Página Inicial')
+
+#Path de rotas
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', minha_view)
+    path('', view_inicial),      #Aponta para a página inicial http://127.0.0.1:8000
+    path('sobre/', minha_view)   #Digite http://127.0.0.1:8000/sobre/ no navegador
 ]
 
 
@@ -36,4 +42,3 @@ de parâmetros: uma string rota e uma função view.
 códigos consulte o arquivo Codigo_de_Respostas_HTTP.pdf.
 5 - No arquivo acima também estão descritos os métodos de requisição HTTP.
 """
-

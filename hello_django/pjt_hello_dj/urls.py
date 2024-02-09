@@ -19,7 +19,7 @@ from django.http import HttpResponse  #Módulo Http Response incluído
 
 #Essa função não fica neste arquivo, está aqui somente por exemplo
 def minha_view(request):
-    return HttpResponse('Hello Django')  #retorna um HTTP response 
+    return HttpResponse('Hello Django')  #retorna um HTTP response
 
 def view_inicial(request):
     return HttpResponse('Página Inicial')
@@ -41,4 +41,6 @@ de parâmetros: uma string rota e uma função view.
 4 - A cada Request do cliente o servidor responde con um código de status, para saber esses
 códigos consulte o arquivo Codigo_de_Respostas_HTTP.pdf.
 5 - No arquivo acima também estão descritos os métodos de requisição HTTP.
+6 - É possível passar um Status Code na função HttpResponse, fazendo por exemplo:
+return HttpResponse('Hello Django', status=202)
 """

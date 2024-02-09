@@ -25,8 +25,8 @@ Django Framework: 5.0.1
 hello_django  ::  Primeiro exemplo no framework Django. Entendendo o arquivo urls.py.\
 boillerplate  ::  Escrevendo uma estrutura básica de projetos Django.\
 utilizando_apps  ::  Iniciando um novo App e entendendo a sua estrutura de arquivos. \
-carregar_arquivo_html  \
-passar_variavel_html  \
+carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e namespace. \
+passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
 arquivo_parcial_html  \
 arquivos_estaticos  
 
@@ -68,12 +68,15 @@ tópicos de cada exemplo.
         viwes.py - Arquivo de renderização das páginas (views).
         tests.py - Arquivo de testes.
         \migrations - Pasta de migrações da base de dados
+        \template - Pasta com templates html (utilizar namespace)
+            \App - Pasta namespace.
+                \pages - Pasta de arquivos html do App
+                    home.thml - Exemplo de uma página html do pertencente ao App.
     \venv - Pasta da máquina virtual do python
         \bin
             activate - Script de ativação da máquina virtual do python
 
 >> <static> - Pasta com os arquivos estáticos do App (utilizar namespace)
->> <template> - Pasta com templates html (utilizar namespace)
 >>> <partials> - Pasta com códigos parciais html
 >>> <pages> - Pasta com as páginas html
 > <base_static/global> - Pasta com os tipos de arquivos estáticos globais

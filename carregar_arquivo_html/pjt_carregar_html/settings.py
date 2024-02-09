@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #Apps criados
-    'app_html',  #App exemplo para carregar um html
+    'app_html',  #Incluir aqui seu App - exemplo para carregar um html
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,8 @@ ROOT_URLCONF = 'pjt_carregar_html.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [], #Você pode adicionar outras pastas de templates em DIRS
+                    #fazendo por exemplo 'DIRS': [BASE_DIR/'base_templates']
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

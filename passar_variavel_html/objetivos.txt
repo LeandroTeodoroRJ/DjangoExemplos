@@ -1,7 +1,6 @@
 ***** PASSAR UMA VARILÁVEL PARA O HTML *****
 
 * Estudar a passagem de variáveis para o template html.
-* Observe a indicação de variável no html dada por {{}}
+* Observe a indicação de variável no html dada por duas chaves {{}}
 * As variáveis são trabalhadas na função da view e depois
 o resultado é carregado no html.
-

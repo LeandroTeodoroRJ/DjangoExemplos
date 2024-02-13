@@ -1,13 +1,13 @@
 ***** ARQUIVOS PARCIAIS PARA CÓDIGO HTML *****
 
 * Um arquivo parcial em código html será incluído no template
-para evitar reperições de código.
+para evitar repetições de código.
 * Os arquivos parciais html são alocados dentro de
 <pasta app>/templates/<app name space>/partials
 * Os arquivos html de paginas serão alocados em
 <pasta app>/templates/<app name space>/pages
-* As instruções no Django são executadas dentro da 
+* As instruções no Django são executadas dentro da
 tag {% %}
 * O caminho para o include começa dentro da pasta
-templates do App
-
+templates do App.
+* Observar o arquivo home.html

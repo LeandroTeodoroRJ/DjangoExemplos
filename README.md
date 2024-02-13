@@ -27,7 +27,7 @@ boillerplate  ::  Escrevendo uma estrutura básica de projetos Django.\
 utilizando_apps  ::  Iniciando um novo App e entendendo a sua estrutura de arquivos. \
 carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e namespace. \
 passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
-arquivo_parcial_html  \
+arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
@@ -46,7 +46,7 @@ tópicos de cada exemplo.
 
 ## ESTRUTURAS DE ARQUIVO DO PROJETO DJANGO
 ```
-\Pasta Inicial
+\Pasta Inicial do Projeto
     db.sqlite3 - Arquivo de banco de dados do sqlite3
     manage.py - Arquivo que tem a mesma função do comando djando-admin,
                 antes da execução do manage.py ele carrega as configurações
@@ -70,17 +70,19 @@ tópicos de cada exemplo.
         \migrations - Pasta de migrações da base de dados
         \template - Pasta com templates html (utilizar namespace)
             \App - Pasta namespace.
+                \partials - Pasta com códigos parciais html.
                 \pages - Pasta de arquivos html do App
                     home.thml - Exemplo de uma página html do pertencente ao App.
-    \venv - Pasta da máquina virtual do python
+        \static - Pasta com os arquivos estáticos do App.
+            \App - Pasta namespace.
+    \base_templates - Pasta com os tipos de arquivos templates globais
+        \global - Pasta namespace global
+
+    \venv - Pasta da máquina virtual do python.
         \bin
             activate - Script de ativação da máquina virtual do python
 
->> <static> - Pasta com os arquivos estáticos do App (utilizar namespace)
->>> <partials> - Pasta com códigos parciais html
->>> <pages> - Pasta com as páginas html
 > <base_static/global> - Pasta com os tipos de arquivos estáticos globais
-> <base_templates/global> - Pasta com os tipos de arquivos templates globais
 ```
 
 ## LINKS ÚTEIS

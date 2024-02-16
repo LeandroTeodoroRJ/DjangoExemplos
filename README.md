@@ -28,12 +28,16 @@ utilizando_apps  ::  Iniciando um novo App e entendendo a sua estrutura de arqui
 carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e namespace. \
 passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
-arquivos_estaticos  
+arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
+if_statement \
+loop_com_for \
+argumento_pela_url \
+template_blocks \
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.
 
-## ROTEIRO CRIAÇÃO DE PROJETO
+## ROTEIRO CRIAÇÃO DE UM PROJETO
 1 - Criar a pasta do projeto e a máquina virtual.\
 2 - django-admin startproject <nome_projeto> . (Cria o projeto na pasta atual ".")\
 3 - python manage.py startapp. (Para criar um App)\
@@ -42,7 +46,7 @@ tópicos de cada exemplo.
 6 - Criar o home.html \
 7 - Criar arquivo app/urls.py \
 8 - Editar arquivo app/views.py \
-9 - Checar com startrunserver ($python3 manage.py runserver)(Servidor rodando no endereço http://127.0.0.1:8000/)
+9 - Checar com startrunserver
 
 ## ESTRUTURAS DE ARQUIVO DO PROJETO DJANGO
 ```
@@ -75,16 +79,22 @@ tópicos de cada exemplo.
                     home.thml - Exemplo de uma página html do pertencente ao App.
         \static - Pasta com os arquivos estáticos do App.
             \App - Pasta namespace.
+                \css - Pasta de arquivos CSS do App.
+                    style.css - Arquivo de código css do App
     \base_templates - Pasta com os tipos de arquivos templates globais
         \global - Pasta namespace global
-
+    \base_static
+        \global - Pasta com os tipos de arquivos estáticos globais.
     \venv - Pasta da máquina virtual do python.
         \bin
-            activate - Script de ativação da máquina virtual do python
-
-> <base_static/global> - Pasta com os tipos de arquivos estáticos globais
+            activate - Script de ativação da máquina virtual do python.
 ```
 
 ## LINKS ÚTEIS
 Códigos de status de respostas HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).\
-Métodos de requisição HTTP[MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods).
+Métodos de requisição HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods).
+
+## COMANDOS DJANGO IMPORTANTES
+$python3 manage.py collectstatic - Coleta os arquivos estáticos agrupando na pasta
+indicada no STATIC_ROOT do settings.py \
+$python3 manage.py runserver - Roda o servidor de desenvolvimento no endereço http://127.0.0.1:8000/ \

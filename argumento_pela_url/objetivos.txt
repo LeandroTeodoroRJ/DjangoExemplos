@@ -1,10 +1,9 @@
 ***** PASSAR UM ARGUMENTO PELA URL *****
 
-Uma função da view pode receber um argumento passado pela 
+Uma função da view pode receber um argumento passado pela
 url do navegador.
 
-
-Leia:
+Leia os arquivos listados e a documentação:
 app_main/urls.py
 app_main/views.py
 home.html

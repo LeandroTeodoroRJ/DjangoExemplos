@@ -29,9 +29,9 @@ carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e na
 passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
+argumento_pela_url  ::  Uma view recebe um argumento passado pela url do navegador. \
 if_statement \
 loop_com_for \
-argumento_pela_url \
 template_blocks \
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos

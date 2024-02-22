@@ -30,9 +30,9 @@ passar_variavel_html  ::  Passando uma variável do python para dentro do html. 
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
 argumento_pela_url  ::  Uma view recebe um argumento passado pela url do navegador. \
+template_blocks  ::  Como aproveitar uma estrutura já criada em html que servirá como base. \
+loop_com_for  ::  Executando um loop for dentro de uma estrutura html. \
 if_statement \
-loop_com_for \
-template_blocks \
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.

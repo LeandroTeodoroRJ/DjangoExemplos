@@ -27,12 +27,18 @@ boillerplate  ::  Escrevendo uma estrutura básica de projetos Django.\
 utilizando_apps  ::  Iniciando um novo App e entendendo a sua estrutura de arquivos. \
 carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e namespace. \
 passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
+dinamic_links  ::  Criando links dinâmicos dentro da Tag <a href= > \  
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
 argumento_pela_url  ::  Uma view recebe um argumento passado pela url do navegador. \
+urls_dinamicas  ::  Indicar o path de uma URL com a função reverse sem indicar todo o caminho de forma manual. \
 template_blocks  ::  Como aproveitar uma estrutura já criada em html que servirá como base. \
 loop_com_for  ::  Executando um loop for dentro de uma estrutura html. \
-if_statement \
+if_statement  ::  Utilizando o if com código html. \
+models  ::  Entendendo sobre os modelos do Django. \
+formulario  ::  Criando um formulario para registro utilizando os models. \
+formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
+monthly_challenges  ::  Aplicação exemplo.
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.
@@ -40,7 +46,7 @@ tópicos de cada exemplo.
 ## ROTEIRO CRIAÇÃO DE UM PROJETO
 1 - Criar a pasta do projeto e a máquina virtual.\
 2 - django-admin startproject <nome_projeto> . (Cria o projeto na pasta atual ".")\
-3 - python manage.py startapp. (Para criar um App)\
+3 - python manage.py startapp <nome_do_app> (Para criar um App)\
 4 - Editar seetings.py em installed_apps. \
 5 - Criar a pasta templates/app_<nome> dentro do app principal.\
 6 - Criar o home.html \
@@ -62,7 +68,7 @@ tópicos de cada exemplo.
         __init__.py - Indica que a pasta atual é um pacote do python. Pode ser usado para inicializar o pacote.
         asgi.py - Utilizado em produção para fazer a ligação e o servidor Web.
         wsgi.py - Utilizado em produção para fazer a ligação e o servidor Web.
-        settings.py - Possui diversas configurações do django.
+        settings.py - Possui diversas configurações globais do projeto no django.
     \App - Pasta do App
         __init__.py - Arquivo de indicação de pacote.
         apps.py - Nome do App
@@ -92,9 +98,16 @@ tópicos de cada exemplo.
 
 ## LINKS ÚTEIS
 Códigos de status de respostas HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).\
-Métodos de requisição HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods).
+Métodos de requisição HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods).\
+Tipos de campos do model: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/fields/).\
+QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/querysets/).
 
 ## COMANDOS DJANGO IMPORTANTES
 $python3 manage.py collectstatic - Coleta os arquivos estáticos agrupando na pasta
 indicada no STATIC_ROOT do settings.py \
 $python3 manage.py runserver - Roda o servidor de desenvolvimento no endereço http://127.0.0.1:8000/ \
+$python3 manage.py migrate - Executa as migrações para a base de bados.
+$python3 manage.py makemigrations - Cria os arquivos de migração
+$python3 manage.py createsuperuser - Cria o usuário root para a seção do administrador
+(127.0.0.1:8000/admin)
+$python3 manage.py shell - Abre o shell do Django

@@ -1,0 +1,29 @@
+TRABALHANDO COM ORM NO DJANGO
+
+Uma estrutura ORM cria tabelas no banco de dados mapeando entidades no
+código fonte.
+Para criar os modelos na base de dados execute os comandos:
+$python3 manage.py migrate
+$python3 manage.py makemigrations
+Crie as classes(modelos) em models.py e registre em admin.py
+
+Veja os arquivos:
+models.py
+admin.py
+pjt_main/urls.py
+
+
+Exemplos no django shell
+CTRL + l - Limpa a tela
+Para importar as models:
+    from app_main.models import Condutor, Carro
+tmp = Carro.objects.all() - Retorna todos os objetos
+tmp.order_by('placa') - Ordena por um campo específico do model
+for i in tmp: print(i.id, i.nome) - Imprime uma lista de id e nome
+tmp[0].nome - Retorna o valor do campo nome do primeiro objeto do Query
+Criando um objeto:
+    condutor = Condutor()
+    condutor.nome = 'Patolino'
+    condutor.save()   --Salva ou atualiza na base de dados
+tmp = Condutor.objects.get(id=1) - Busca na base o registro com id=1
+tmp.delete() - Apaga da base de dados

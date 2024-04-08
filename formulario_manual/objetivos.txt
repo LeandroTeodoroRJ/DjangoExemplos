@@ -1,0 +1,10 @@
+****** CRIANDO UM FORMULÁRIO *******
+
+Registrando usuários por formulário utilizando o model padrão User do
+django e inserindo manualmente os campos do formulário no html.
+
+Leia os arquivos:
+forms.py
+views.py
+home.html
+urls.py

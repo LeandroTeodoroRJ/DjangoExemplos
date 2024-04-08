@@ -1,0 +1,9 @@
+**** URLS DINÂMICAS ****
+
+* Entender como é possível indicar o path de uma URL com a função reverse 
+sem indicar todo o caminho de forma manual.
+
+* Leia:
+	pjt_main/urls.py
+	App_main/view.py
+	App_main/urls.py

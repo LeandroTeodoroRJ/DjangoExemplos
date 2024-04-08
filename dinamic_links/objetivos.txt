@@ -1,0 +1,8 @@
+**** LINKS DINÂMICOS ****
+
+* Entender como é possível inserir links dinâmicos dentro do código HTML.
+
+* Leia:
+	pjt_main/urls.py
+	App_main/view.py
+	

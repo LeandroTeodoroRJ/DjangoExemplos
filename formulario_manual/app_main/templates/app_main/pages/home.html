@@ -1,0 +1,35 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Criando formulários </title>
+
+        <!--Tag link para o arquivo estático, note que não há a tag style -->
+        <link rel="stylesheet" href="{% static 'app_main/css/style.css' %}">
+
+    </head>
+    <body>
+        <h2>Register</h2>
+        <form action = "" method = "POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{field}}
+                {% if field.help_text %}
+                    <p class="help-text">{{ field.help_text }}</p>
+                {% endif %}
+                {{ field.errors }}  <!-- Caso exista algum erro mostra na tela -->
+                </div>
+                {% endfor %}
+
+                <div class="form-group">
+                    <button type="submit">Send</button>
+                </div>
+
+        </form>
+    </body>
+</html>

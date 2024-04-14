@@ -1,0 +1,8 @@
+
+***** LISTAS DINÂMICAS COM A TAG FOR  ****
+
+Compreender como iterar listas no html (DTL)
+
+Veja:
+app_main/index.hml
+app_main/views.py

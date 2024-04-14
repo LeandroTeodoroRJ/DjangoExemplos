@@ -1,0 +1,8 @@
+
+***** URL DTL  ****
+
+Como passar uma URL dinâmica usando a tag URL do Django Template Language (DTL)
+
+Veja:
+app_main/index.hml
+app_main/views.py

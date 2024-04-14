@@ -9,24 +9,27 @@ from django.urls import reverse     #To dynamic redirect way
 
 monthly_dic = {
     "january": "This works",
-    "february": "Walk at least 20 min every day",
-    "march": "Go to gyn every day",
-    "april": "Don't forget of learning Django",
-    "may": None
+    "february": "Walk at least 20 min every day"
 }
 
 def index(request):
-    months = list(monthly_dic.keys())  #Return a list of dict keys - months names
-    return render(request, "app_main/pages/index.html", {
-        "list_of_months": months
-    })
+    months = list(monthly_dic.keys())  #Return a list of dict keys
+    list_items = ""
+
+    for i in months:
+        captalized_month = i.capitalize()
+        month_path = reverse("month-challenge-path", args=[i])
+        list_items += f"<li><a href=\"{month_path}\">{captalized_month}</li>"
+
+    response_data = f"<ul>{list_items}</ul>"
+    return HttpResponse(response_data)
+
 
 def monthly_challenge(request, month):
     try:
         monthly_text = monthly_dic[month]
         return render(request, "app_main/pages/challenge.html", {
-            "text": monthly_text,
-            "month_name": month
+            "text": monthly_text
         })
     except:
         return HttpResponseNotFound("Nothing to say")

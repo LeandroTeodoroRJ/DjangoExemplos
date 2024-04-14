@@ -1,0 +1,8 @@
+
+***** HERANÇA DE TEMPLATES HTML  ****
+
+Como aproveitar código html como herança de templates
+
+Veja:
+app_main/index.hml
+base_templates/global/base.html

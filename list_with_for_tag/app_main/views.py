@@ -11,8 +11,7 @@ monthly_dic = {
     "january": "This works",
     "february": "Walk at least 20 min every day",
     "march": "Go to gyn every day",
-    "april": "Don't forget of learning Django",
-    "may": None
+    "april": "Don't forget of learning Django"
 }
 
 def index(request):

@@ -28,17 +28,22 @@ utilizando_apps  ::  Iniciando um novo App e entendendo a sua estrutura de arqui
 carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e namespace. \
 passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
 dinamic_links  ::  Criando links dinâmicos dentro da Tag <a href= > \  
+dinamic_html_content  ::  Criando conteúdo html de forma dinâmica. \
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
 argumento_pela_url  ::  Uma view recebe um argumento passado pela url do navegador. \
 urls_dinamicas  ::  Indicar o path de uma URL com a função reverse sem indicar todo o caminho de forma manual. \
+url_dtl_tag  ::  Como passar uma URL dinâmica usando a tag URL do Django Template Language (DTL) .\
+aplicando_filtros  ::  Aplicando filtros no html dinâmico. \
 template_blocks  ::  Como aproveitar uma estrutura já criada em html que servirá como base. \
+heranca_de_template_html  ::  Herança de tempĺates html. \
 loop_com_for  ::  Executando um loop for dentro de uma estrutura html. \
+list_with_for_tag  :: Iterando listas com a tag for do Django. \
 if_statement  ::  Utilizando o if com código html. \
 models  ::  Entendendo sobre os modelos do Django. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
-monthly_challenges  ::  Aplicação exemplo.
+monthly_challenges  ::  Aplicação com as estruturas básicas.
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.
@@ -100,6 +105,7 @@ tópicos de cada exemplo.
 Códigos de status de respostas HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).\
 Métodos de requisição HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods).\
 Tipos de campos do model: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/fields/).\
+Django Template Language - Filtros: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/). \
 QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/querysets/).
 
 ## COMANDOS DJANGO IMPORTANTES

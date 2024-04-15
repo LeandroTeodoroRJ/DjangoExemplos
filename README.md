@@ -31,12 +31,15 @@ dinamic_links  ::  Criando links dinâmicos dentro da Tag <a href= > \
 dinamic_html_content  ::  Criando conteúdo html de forma dinâmica. \
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
+load_css  ::  Carregando arquivo css do App e de forma global. \
 argumento_pela_url  ::  Uma view recebe um argumento passado pela url do navegador. \
 urls_dinamicas  ::  Indicar o path de uma URL com a função reverse sem indicar todo o caminho de forma manual. \
 url_dtl_tag  ::  Como passar uma URL dinâmica usando a tag URL do Django Template Language (DTL) .\
 aplicando_filtros  ::  Aplicando filtros no html dinâmico. \
 template_blocks  ::  Como aproveitar uma estrutura já criada em html que servirá como base. \
 heranca_de_template_html  ::  Herança de tempĺates html. \
+partials  ::  Criando snipets codes em html. \
+error_404  ::  Retornando uma página de erro 404. \
 loop_com_for  ::  Executando um loop for dentro de uma estrutura html. \
 list_with_for_tag  :: Iterando listas com a tag for do Django. \
 if_statement  ::  Utilizando o if com código html. \

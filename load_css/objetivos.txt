@@ -1,0 +1,13 @@
+
+***** LOAD CSS  *****
+
+Carregando arquivo css do App e de forma global.
+
+Veja:
+base_static/global/styles.css
+app_main/static/challenges.css
+app_main/templates/app_main/pages/challenge.html
+app_main/templates/app_main/pages/index.html
+global_templates/global/base.html
+app_main/view.py
+settings.py

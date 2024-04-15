@@ -1,0 +1,9 @@
+
+***** PARTIALS  *****
+
+Como criar um snipet code em html com o DTL
+
+Veja:
+app_main/partials/header.thml
+app_main/index.hml
+app_main/urls.py

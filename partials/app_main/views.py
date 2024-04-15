@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse     #To dynamic redirect way
-from django.http import Http404     #To send 404 error
-#from django.template.loader import render_to_string
 
 # Create your views here.
 #def home(request):
@@ -31,10 +29,7 @@ def monthly_challenge(request, month):
             "month_name": month
         })
     except:
-        #Return page not found - 404 error
-        response_data = render_to_string("global/404.html")
-        return HttpResponseNotFound(response_data)
-#        raise Http404()     #Set DEBUG=False in settings
+        return HttpResponseNotFound("Nothing to say")
 
 
 def monthly_challenges_by_number(request, month):

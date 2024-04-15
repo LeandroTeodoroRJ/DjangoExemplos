@@ -1,0 +1,9 @@
+
+***** ERRO 404  *****
+
+Retornar uma página de erro 404
+
+Veja:
+base_template/global/404.html
+app_main/view.py
+

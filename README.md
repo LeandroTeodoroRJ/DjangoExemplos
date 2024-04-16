@@ -46,7 +46,7 @@ if_statement  ::  Utilizando o if com código html. \
 models  ::  Entendendo sobre os modelos do Django. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
-monthly_challenges  ::  Aplicação com as estruturas básicas.
+monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.
@@ -115,8 +115,8 @@ QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/
 $python3 manage.py collectstatic - Coleta os arquivos estáticos agrupando na pasta
 indicada no STATIC_ROOT do settings.py \
 $python3 manage.py runserver - Roda o servidor de desenvolvimento no endereço http://127.0.0.1:8000/ \
-$python3 manage.py migrate - Executa as migrações para a base de bados.
-$python3 manage.py makemigrations - Cria os arquivos de migração
+$python3 manage.py migrate - Executa as migrações para a base de bados. \
+$python3 manage.py makemigrations - Cria os arquivos de migração. \
 $python3 manage.py createsuperuser - Cria o usuário root para a seção do administrador
-(127.0.0.1:8000/admin)
+(127.0.0.1:8000/admin) \
 $python3 manage.py shell - Abre o shell do Django

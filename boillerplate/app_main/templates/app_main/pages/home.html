@@ -1,17 +1,15 @@
+{% extends "global/base.html" %}  {# global main template is load #}
 {% load static  %}
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Python-Django </title>
+{% block page_title %}
+Python-Django
+{% endblock %}
 
-        <!--Tag link para o arquivo estático, note que não há a tag style -->
-        <link rel="stylesheet" href="{% static 'app_main/css/style.css' %}"> 
+{% block css_style %}
+    <!--Tag link para o arquivo estático, note que não há a tag style -->
+    <link rel="stylesheet" href="{% static 'app_main/css/home.css' %}"> {# local css file is loaded #}
+{% endblock %}
 
-    </head>
-    <body>
-        <h1>Django Boillerplate - Home</h1>
-    </body>
-</html>
+{% block content %}   {# body content #}
+    <h1 class="fac">Django Boillerplate - Home</h1>  {# class fac from global css file #}
+{% endblock %}

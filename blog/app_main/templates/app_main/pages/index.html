@@ -1,0 +1,44 @@
+
+{% extends "global/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+My Blog
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'app_main/css/index.css' %}"> {# local css file is loaded #}
+<link rel="stylesheet" href="{% static 'app_main/css/post.css' %}">
+{% endblock %}
+
+{% block content %}   {# body content #}
+
+        <section id="welcome">
+            <header>
+                <img src="{% static 'app_main/images/person1.png' %}" alt="I am the author of this blog.">
+                <h2>MY BLOG</h2>
+            </header>
+            <p>Hi, I love to blog about tech and the word!</p>
+        </section>
+
+        <section id="latest-posts">
+            <h2>My Latest Thoughts</h2>
+            <ul>
+                {% include "app_main/partials/post.html" %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>What I Do.</h2>
+            <p>
+                I love programming, I love to help others and I enjoy exploring
+                new tecnologies in general!
+            </p>
+            <p>
+                My goal is to keep on growing as a developer - and if I could
+                help you do the same, I'd be very happy!
+            </p>
+        </section>
+
+
+{% endblock %}

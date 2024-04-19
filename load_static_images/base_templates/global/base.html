@@ -1,0 +1,18 @@
+{% load static  %}  {# load global static file #}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> {% block title %}{% endblock %} </title>
+        <!--Tag link para o arquivo estático, note que não há a tag style -->
+        <link rel="stylesheet" href="{% static 'global/app.css' %}"> {# global css file is loaded #}
+
+        {% block css_files %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

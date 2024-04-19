@@ -1,0 +1,25 @@
+{% extends "global/base.html" %}
+{% load static  %}
+
+{% block page_title %}
+All My Posts
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'app_main/css/post.css' %}">
+<link rel="stylesheet" href="{% static 'app_main/css/all-posts.css' %}"> {# local css file is loaded #}
+{% endblock %}
+
+{% block content %}   {# body content #}
+<section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+        {% include "app_main/partials/post.html" %}
+        {% include "app_main/partials/post.html" %}
+        {% include "app_main/partials/post.html" %}
+        {% include "app_main/partials/post.html" %}
+        {% include "app_main/partials/post.html" %}
+        {% include "app_main/partials/post.html" %}
+    </ul>
+</section>
+{% endblock %}

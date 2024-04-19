@@ -24,6 +24,7 @@ Django Framework: 5.0.1
 ## ORDEM SUGERIDA DE LEITURA DOS PROJETOS.
 hello_django  ::  Primeiro exemplo no framework Django. Entendendo o arquivo urls.py.\
 boillerplate  ::  Escrevendo uma estrutura básica de projetos Django.\
+boillerplate_simple  ::  Estrutura básica sem arquivos globais. \
 utilizando_apps  ::  Iniciando um novo App e entendendo a sua estrutura de arquivos. \
 carregar_arquivo_html  :: Como carregar um arquivo html utilizando o render e namespace. \
 passar_variavel_html  ::  Passando uma variável do python para dentro do html. \
@@ -31,6 +32,7 @@ dinamic_links  ::  Criando links dinâmicos dentro da Tag <a href= > \
 dinamic_html_content  ::  Criando conteúdo html de forma dinâmica. \
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
+load_static_images  ::  Carregando imagens. \
 load_css  ::  Carregando arquivo css do App e de forma global. \
 argumento_pela_url  ::  Uma view recebe um argumento passado pela url do navegador. \
 urls_dinamicas  ::  Indicar o path de uma URL com a função reverse sem indicar todo o caminho de forma manual. \
@@ -47,6 +49,7 @@ models  ::  Entendendo sobre os modelos do Django. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
+blog  ::  Criando um blog. \
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.

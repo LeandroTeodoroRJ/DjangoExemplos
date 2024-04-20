@@ -31,6 +31,7 @@ passar_variavel_html  ::  Passando uma variável do python para dentro do html. 
 dinamic_links  ::  Criando links dinâmicos dentro da Tag <a href= > \  
 dinamic_html_content  ::  Criando conteúdo html de forma dinâmica. \
 arquivo_parcial_html  ::  Entendendo como reutilizar fragmentos de código html. \
+variavel_partial_template  ::  Passando uma variável para dentro do partial snipet code. \
 arquivos_estaticos  ::  Arquivos estáticos são arquivos não modificáveis organizados no projeto. \
 load_static_images  ::  Carregando imagens. \
 load_css  ::  Carregando arquivo css do App e de forma global. \
@@ -49,6 +50,7 @@ models  ::  Entendendo sobre os modelos do Django. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
+partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
 blog  ::  Criando um blog. \
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos

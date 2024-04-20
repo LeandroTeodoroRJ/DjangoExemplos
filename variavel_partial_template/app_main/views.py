@@ -88,12 +88,7 @@ def starting_page(request):
 
 
 def posts(request):
-    return render(request, 'app_main/pages/all-posts.html', {
-        "all_posts_template": all_posts
-    })
+    return render(request, 'app_main/pages/all-posts.html')
 
 def post_detail(request, slug):
-    single_post = next(i for i in all_posts if i['slug'] == slug)
-    return render(request, 'app_main/pages/post-detail.html', {
-        "single_post_template": single_post
-    })
+    return render(request, 'app_main/pages/post-detail.html')

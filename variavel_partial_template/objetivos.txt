@@ -1,0 +1,9 @@
+
+***** VARIÁVEL PARTIAL TEMPLATE  *****
+
+Como passar uma variável dentro do partial(include) template
+
+Veja:
+app_main/templates/app_main/pages/index.html
+app_main/templates/app_main/partials/post.html
+blog/app_main/views.py

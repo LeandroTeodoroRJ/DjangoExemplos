@@ -1,0 +1,24 @@
+{% extends "app_main/pages/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+    {{ books_template.title }}
+{% endblock %}
+
+{% block css_style %}
+
+
+{% endblock %}
+
+{% block content %}   {# body content #}
+    <h1>{{ books_template.title }}</h1>
+    <h2>{{ books_template.author }}</h2>
+    <p>The book has a rating of {{ books_template.rating }}
+    {% if  books_template.is_bestselling %}
+        and is a bestseller.
+    {% else %}
+        and isn't a bestseller.
+    {% endif %}
+    </p>
+
+{% endblock %}

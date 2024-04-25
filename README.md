@@ -14,11 +14,17 @@ python3 -m pip install pip setuptools wheel --upgrade
 pip3 nstall django
 pip3 install pytest
 deactivate
+pip freeze > requirements.txt       (export requirements)
+pip install -r requirements.txt     (when create a new VM)
 ```
 
 ## VERSÕES
 Python: 3.10.12
 Django Framework: 5.0.1
+
+## ARQUIVOS EM ANEXO
+requirements.txt  ::  Arquivo de dependências para a máquina virtual. \
+Codigos_de_respostas_HTTP.pdf  ::  Respostas do protocolo http. \
 
 
 ## ORDEM SUGERIDA DE LEITURA DOS PROJETOS.
@@ -53,6 +59,7 @@ book_store  ::  Entendendo um pouco mais sorbe modelos do django. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
 partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
 blog  ::  Criando um blog. \
+
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
 tópicos de cada exemplo.
@@ -118,7 +125,11 @@ Validação de dados no model: [Documentação Oficial](https://docs.djangoproje
 Django Template Language - Filtros: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/). \
 QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/querysets/). \
 On-Line SQLite Viewer: [Site](https://sqliteviewer.app/). \
-Making Queries with Field lookups: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/topics/db/queries/)
+Making Queries with Field lookups: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/topics/db/queries/). \
+Delete multiple model instances [Documentação Oficial](https://docs.djangoproject.com/en/3.1/topics/db/queries/#deleting-objects). \
+Update multiple model instances [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update). \
+Create multiple model instances [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create).
+
 
 ## COMANDOS DJANGO IMPORTANTES
 $python3 manage.py collectstatic - Coleta os arquivos estáticos agrupando na pasta

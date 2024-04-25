@@ -3,8 +3,10 @@
 from django.urls import path
 from app_main import views      #Importação das funções da view do app
 
+
 urlpatterns = [
-    path('', views.home),  #Carrega a função home que está dentro de view
+    path('', views.index),  #Carrega a função home que está dentro de view
+    path('detail/<int:book_id>', views.book_detail, name="book-detail-path"),
 ]
 
 """
@@ -15,4 +17,3 @@ que ficaria www.meusite.com/pagina/
 3 - Para o path indicar a raíz do site utilize como rota aspas vazias, path('', minha_view).
 
 """
-

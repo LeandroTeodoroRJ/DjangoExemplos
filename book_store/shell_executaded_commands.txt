@@ -1,0 +1,81 @@
+Comandos executados shell do Django
+
+Importando o módulo do app
+from app_main.models import Book
+
+Criando um registro:
+harry_potter = Book(title="Harry Potter 1 - The Philosopher's Stone", rating=5)
+harry_poter.save()
+lord_of_the_rings = Book(title="Lord of the Rings", rating=4)
+lord_of_the_rings.save()
+
+
+Retorna uma lista de objetos criados no database
+Book.objects.all()
+
+Retornando o segundo objeto(registro)
+Book.objects.all()[1]
+
+Retorna um campo de um objeto criado(registro)
+>>> Book.objects.all()[1].is_bestselling
+False
+
+Alterando um campo no Registro
+>>> harry_potter = Book.objects.all()[0]
+>>> harry_potter
+<Book: Harry Potter 1 - The Philosopher's Stone (5)>
+>>> harry_potter.author = "J.K. Rowling"
+>>> harry_potter.save()
+
+Deletando um Registro
+>>> harry_potter = Book.objects.all()[0]
+>>> harry_potter.delete()
+(1, {'app_main.Book': 1})
+>>> Book.objects.all()[0]
+<Book: Lord of the Rings (4)>
+
+Criando um registro diretamente no banco de dados
+>>> Book.objects.create(title="Harry Potter 1", rating=5, author="J.K. Rowling", is_bestselling=True)
+<Book: Harry Potter 1 (5)>
+>>> Book.objects.all()
+<QuerySet [<Book: Lord of the Rings (4)>, <Book: Harry Potter 1 (5)>]>
+
+Filtrando buscas:
+1- O método get só retorna um registro
+>>> Book.objects.get(id=2)
+<Book: Lord of the Rings (4)>
+>>> Book.objects.get(title="My Stories")
+<Book: My Storie (2)>
+
+2- Com o método filter podemos retornar mais de um resultado
+>>> Book.objects.filter(is_bestselling=True)
+<QuerySet [<Book: Harry Potter 1 (5)>, <Book: Love is true (5)>]>
+
+3- Filtrando com mais de um campo (operador and)
+>>> Book.objects.filter(is_bestselling=False, rating=4)
+<QuerySet [<Book: Lord of the Rings (4)>]>
+
+4- Filtrando com menor ou igual (Lower Than Equal - __lte)
+>>> Book.objects.filter(rating__lte=4)
+<QuerySet [<Book: Lord of the Rings (4)>, <Book: My Storie (2)>]>
+
+5- Special parameters (Field lookups)
+__lte :: lower than iqual
+__lt  :: lower than
+__gt  :: greater than
+
+6- Filtrando por dentro de uma string
+>>> Book.objects.filter(title__contains="Stories")   #Contém na string (Case sensitive)
+<QuerySet [<Book: My Stories (2)>]>
+>>> Book.objects.filter(title__icontains="storie")   # NO Case sensitive
+<QuerySet [<Book: My Storie (2)>]>
+
+7- Operador OR
+>>> from django.db.models import Q
+>>> Book.objects.filter(Q(is_bestselling=False) | Q(rating=4))
+<QuerySet [<Book: Lord of the Rings (4)>, <Book: My Storie (2)>]>
+
+8- Operador AND com a classe Q
+>>> Book.objects.filter(Q(is_bestselling=False) , Q(rating=4))
+<QuerySet [<Book: Lord of the Rings (4)>]>
+Importante: É possível combinar ou e and em uma única query

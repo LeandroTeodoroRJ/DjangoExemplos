@@ -49,6 +49,7 @@ if_statement  ::  Utilizando o if com código html. \
 models  ::  Entendendo sobre os modelos do Django. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
+book_store  ::  Entendendo um pouco mais sorbe modelos do django. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
 partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
 blog  ::  Criando um blog. \
@@ -113,15 +114,18 @@ tópicos de cada exemplo.
 Códigos de status de respostas HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).\
 Métodos de requisição HTTP: [MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods).\
 Tipos de campos do model: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/fields/).\
+Validação de dados no model: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/validators/). \
 Django Template Language - Filtros: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/). \
-QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/querysets/).
+QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/querysets/). \
+On-Line SQLite Viewer: [Site](https://sqliteviewer.app/). \
+Making Queries with Field lookups: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/topics/db/queries/)
 
 ## COMANDOS DJANGO IMPORTANTES
 $python3 manage.py collectstatic - Coleta os arquivos estáticos agrupando na pasta
 indicada no STATIC_ROOT do settings.py \
 $python3 manage.py runserver - Roda o servidor de desenvolvimento no endereço http://127.0.0.1:8000/ \
+$python3 manage.py makemigrations - Cria os arquivos de migração dentro da pasta migrations. \
 $python3 manage.py migrate - Executa as migrações para a base de bados. \
-$python3 manage.py makemigrations - Cria os arquivos de migração. \
 $python3 manage.py createsuperuser - Cria o usuário root para a seção do administrador
 (127.0.0.1:8000/admin) \
 $python3 manage.py shell - Abre o shell do Django

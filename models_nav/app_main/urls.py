@@ -6,7 +6,7 @@ from app_main import views      #Importação das funções da view do app
 
 urlpatterns = [
     path('', views.index),  #Carrega a função home que está dentro de view
-    path('detail/<slug:slug_book_name>', views.book_detail, name="book-detail-path"),
+    path('detail/<int:book_id>', views.book_detail, name="book-detail-path"),
 ]
 
 """

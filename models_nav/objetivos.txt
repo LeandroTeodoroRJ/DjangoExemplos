@@ -1,0 +1,7 @@
+
+***** MODELS NAV  *****
+
+Criando uma navegação pelo template nos registros do modelo
+
+Veja:
+Os ptincipais arquivos de app_main

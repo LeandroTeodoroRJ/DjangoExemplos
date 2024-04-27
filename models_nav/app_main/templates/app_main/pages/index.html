@@ -13,10 +13,7 @@
 {% block content %}   {# body content #}
     <ul>
         {% for i in books_template %}
-        <li>{{ i.title }} - Rating: {{ i.rating }} <a href="{% url "book-detail-path" i.slug %}">See More</a></li>
+        <li>{{ i.title }} - Rating: {{ i.rating }} <a href="{% url "book-detail-path" i.id %}">See More</a></li>
         {% endfor %}
     </ul>
-
-    <br>
-    <p>Total number of books: {{ total_number_of_books }} and avarage rating is: {{ average_rating.rating__avg }}</p>
 {% endblock %}

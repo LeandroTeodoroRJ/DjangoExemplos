@@ -53,9 +53,10 @@ loop_com_for  ::  Executando um loop for dentro de uma estrutura html. \
 list_with_for_tag  :: Iterando listas com a tag for do Django. \
 if_statement  ::  Utilizando o if com código html. \
 models  ::  Entendendo sobre os modelos do Django. \
+models_nav  ::  Criando uma navegação entre os registros do modelo. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
-book_store  ::  Entendendo um pouco mais sorbe modelos do django. \
+book_store  ::  Implementação de um model no django, django shell, executando queries e criando uma dataset view. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
 partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
 blog  ::  Criando um blog. \

@@ -16,7 +16,7 @@ class Book(models.Model):
     #null=True indicated that for blank insertion field the null will write to default value.
     #It's possible declare a default value using default=<> argument
     #You can add the blank=True argument to allow empty fields in the database - by default is's NOT allowed
-    slug = models.SlugField(default="", null=False, db_index=True)
+    slug = models.SlugField(default="", null=False)
 
     #Important: When the class property is modified so it necessary runs makemigrations and migrations
 

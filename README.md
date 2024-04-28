@@ -127,9 +127,10 @@ Django Template Language - Filtros: [Documentação Oficial](https://docs.django
 QuerySet API reference: [Documentação Oficial](https://docs.djangoproject.com/pt-br/3.2/ref/models/querysets/). \
 On-Line SQLite Viewer: [Site](https://sqliteviewer.app/). \
 Making Queries with Field lookups: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/topics/db/queries/). \
-Delete multiple model instances [Documentação Oficial](https://docs.djangoproject.com/en/3.1/topics/db/queries/#deleting-objects). \
-Update multiple model instances [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update). \
-Create multiple model instances [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create).
+Delete multiple model instances: [Documentação Oficial](https://docs.djangoproject.com/en/3.1/topics/db/queries/#deleting-objects). \
+Update multiple model instances: [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update). \
+Create multiple model instances: [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create). \
+Django Admin Site Configuração: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/). \
 
 
 ## COMANDOS DJANGO IMPORTANTES
@@ -141,3 +142,11 @@ $python3 manage.py migrate - Executa as migrações para a base de bados. \
 $python3 manage.py createsuperuser - Cria o usuário root para a seção do administrador
 (127.0.0.1:8000/admin) \
 $python3 manage.py shell - Abre o shell do Django
+
+## OUTRAS OBSERVAÇÕES
+### Django Admin
+-- Rota: http://127.0.0.1:8000/admin \
+-- Para criar o usuário administrador: $python3 manage.py createsuperuser. \
+-- Registre o model no arquvo admin.py do app com from .models import <class name>; admin.site.register(<class name>). \
+-- Se o campo do model for configurado como editable=False ele não aparecerá no Django Admin. \
+-- Se você utilizar prepopulated_fields no admin não é necessário utilizar slugify no respectivo model. \

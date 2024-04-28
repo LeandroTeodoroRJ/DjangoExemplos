@@ -1,6 +1,0 @@
-set linenumbers
-set tabsize 4
-set tabstospaces
-set smooth
-set multibuffer
-include /usr/share/nano/python.nanorc

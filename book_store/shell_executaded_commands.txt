@@ -1,7 +1,7 @@
 Comandos executados shell do Django
 
 Importando o módulo do app
-from app_main.models import Book
+from app_main.models import Book, Address, Author
 
 Criando um registro:
 harry_potter = Book(title="Harry Potter 1 - The Philosopher's Stone", rating=5)
@@ -79,3 +79,65 @@ __gt  :: greater than
 >>> Book.objects.filter(Q(is_bestselling=False) , Q(rating=4))
 <QuerySet [<Book: Lord of the Rings (4)>]>
 Importante: É possível combinar ou e and em uma única query
+
+9- Inserindo um registro com chave estrangeira
+>>> jkrowling = Author(first_name="J.K.", last_name="Rowling")  #Chave estrangeira
+>>> jkrowling.save()
+>>> hp1 = Book(title="Harry Potter 1", rating=5, is_bestselling=True, slug="", author=jkrowling)
+>>> hp1.save()
+
+10- Realizando um "Join" em tabelas correlacionadas
+>>> harrypotter = Book.objects.get(title="Harry Poter 1")
+>>> harrypotter.author  #Chave estrangeira da tabela author
+<Author: Author object (1)>
+>>> harrypotter.author.first_name   #"Join"
+'J.K.'
+>>>
+
+11- Executando uma busca com filtro relacionado
+Book.objects.filter(<tabela relacionada>__<campo>=<valor>)
+>>> books_by_rowling = Book.objects.filter(author__last_name="Rowling")
+>>> books_by_rowling
+... também podemos ...
+>>> books_by_rowling = Book.objects.filter(author__last_name__contains="wling")
+>>> books_by_rowling
+<QuerySet [<Book: Harry Poter 1 (5)>]>
+
+12- Realizando uma busca invertendo a relação
+>>> jkr = Author.objects.get(first_name="J.K.")
+>>> jkr
+<Author: Author object (1)>
+>>> jkr.book_set.all()
+<QuerySet [<Book: Harry Poter 1 (5)>]>
+>>> jkr.book_set.get(title="Harry Potter 1")
+<Book: Harry Potter 1 (5)>
+-- Um conjunto 'set' é criado com as relações das outras tabelas.
+-- É possível substituir 'book_set' por um alias declarando related_name="<string>"
+author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True, related_name="books")
+Assim temos:
+>>> jkr.books.all()
+<QuerySet [<Book: Harry Poter 1 (5)>]>
+
+13- Modificando um registro com relação um para um.
+>>> jk.address
+>>> addr1 = Address(street="St. Lois", city="London", postal_code=86512)
+>>> addr1.save()
+>>> jk.address = addr1
+>>> jk.save()
+>>> jk.address
+<Address: Address object (1)>
+-- Modificando um registro com relação um para um
+>>> jk.address.street
+'St. Lois'
+>>> jk.address.street = "St. Louis"
+>>> jk.address.ave()
+>>> jk.address.street
+'St. Louis'
+
+14- Obtendo a relação inversa do um para um.
+>>> ad1 = Address.objects.get(street="St. Louis")
+>>> ad1.author
+<Author: J.K. Rowling>
+>>> ad1.author.first_name
+'J.K.'
+>>>

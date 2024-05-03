@@ -5,12 +5,16 @@ from django.utils.text import slugify
 # Create your models here.
 # Important! You must read shell_executaded_commands.txt file.
 
-class Country(models.Model):
+class Country(models.Model): #Many to Many relation
     name = models.CharField(max_length=80)
     code = models.CharField(max_length=80)
 
     def __str__(self):
         return self.name + " - " + self.code
+
+    #To correct label on django admin site (not Countrys)
+    class Meta:
+        verbose_name_plural = "Countries"
 
 class Address(models.Model):
     street = models.CharField(max_length=80)
@@ -63,6 +67,7 @@ class Book(models.Model):
 
     #Many to Many relation
     #For this relation isn't necessary set-up on_delete
+    #It's possible to indicate related_name=<name> for many-to-many relation
     published_countries = models.ManyToManyField(Country)
 
     #Important: When the class property is modified so it necessary runs makemigrations and migrations

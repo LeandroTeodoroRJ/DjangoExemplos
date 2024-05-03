@@ -1,7 +1,7 @@
 Comandos executados shell do Django
 
 Importando o módulo do app
-from app_main.models import Book, Address, Author
+from app_main.models import Book, Address, Author, Country
 
 Criando um registro:
 harry_potter = Book(title="Harry Potter 1 - The Philosopher's Stone", rating=5)
@@ -112,7 +112,7 @@ Book.objects.filter(<tabela relacionada>__<campo>=<valor>)
 >>> jkr.book_set.get(title="Harry Potter 1")
 <Book: Harry Potter 1 (5)>
 -- Um conjunto 'set' é criado com as relações das outras tabelas.
--- É possível substituir 'book_set' por um alias declarando related_name="<string>"
+-- É possível substituir 'book_set' por um alias declarando related_name="<nome>"
 author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True, related_name="books")
 Assim temos:
 >>> jkr.books.all()
@@ -140,4 +140,31 @@ Assim temos:
 <Author: J.K. Rowling>
 >>> ad1.author.first_name
 'J.K.'
+
+15- Relação muitos-para-muitos
+-- Adicionando um registro
+>>> germany = Country(name="Germany", code="DE")
+>>> germany.save()
+>>> brazil = Country(name="Brazil", code="BR")
+>>> brazil.save()
+
+-- Adicionando na realação
+>>> hp1 = Book.objects.all()[0]
+>>> hp1
+<Book: Harry Potter 1 (5)>
+#O método add é utilizado pois se trata de uma lista é só é valido para relação
+#de muitos para muitos
+>>> hp1.published_countries.add(germany)
+>>> hp1.published_countries.add(brazil)
+>>> hp1.save()
+
+-- Obtendo a lista da Relação
+>>> hp1.published_countries.all()
+<QuerySet [<Country: Germany - DE>, <Country: Brazil - BR>]>
 >>>
+
+-- Obtendo a relação inversa partindo de Country
+>>> germany.book_set.all()
+<QuerySet [<Book: Harry Potter 1 (5)>]>
+>>> brazil.book_set.all()
+<QuerySet [<Book: Harry Potter 1 (5)>]>

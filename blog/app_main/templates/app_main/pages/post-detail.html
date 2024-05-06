@@ -12,9 +12,14 @@
 {% block content %}   {# body content #}
 <section id="summary">
     <h2>{{ single_post_template.title }}</h2>
+    <div >
+        {% for i in post_tags %}
+            <span class="tag">{{ i.caption }}</span>
+        {% endfor %}
+    </div>
     <article class="">
-        <img src="{% static 'app_main/images/'|add:single_post_template.image %}" alt="{{ single_post_template.title }}">
-        <address> By {{ single_post_template.author }}</address>
+        <img src="{% static 'app_main/images/'|add:single_post_template.image_name %}" alt="{{ single_post_template.title }}">
+        <address> By <a href="mailto:{{ single_post_template.author.emial }}">{{ single_post_template.author }}</a></address>
         <div>
             Last updated on <time>{{ single_post_template.date|date:"d M Y" }}</time>
             {# https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#date #}

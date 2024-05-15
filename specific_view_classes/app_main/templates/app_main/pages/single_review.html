@@ -1,0 +1,15 @@
+{% extends "app_main/pages/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+Review Details
+{% endblock %}
+
+{% block css_style %}
+{% endblock %}
+
+{% block content %}   {# body content #}
+    <h1>Author: {{ review_template.user_name }}</h1>
+    <h2>Rating: {{ review_template.rating }}</h2>
+    <p>Comments: {{ review_template.review_text }}</p>
+{% endblock %}

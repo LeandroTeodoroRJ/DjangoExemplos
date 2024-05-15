@@ -1,0 +1,23 @@
+
+{% extends "app_main/pages/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+Your Review
+{% endblock %}
+
+{% block css_style %}
+{% endblock %}
+
+{% block content %}   {# body content #}
+    <h1>Form:</h1>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <div>
+            {{ render_form }}
+        </div>
+        <br><br>
+        <button type="submit">Send</button>
+        <br>
+    </form>
+{% endblock %}

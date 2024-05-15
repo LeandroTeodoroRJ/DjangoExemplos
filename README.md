@@ -57,6 +57,8 @@ models_nav  ::  Criando uma navegação entre os registros do modelo. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
 formulario_manual  ::  Inserindo campos do formulário manualmente no html. \
 feedback  ::  Utilizando formulários e views. \
+class_view  ::  Como usar as classes Views. \
+specific_view_classes  ::  Utilizando classes específicas do django para as views. \
 book_store  ::  Implementação de um model no django, django shell, executando queries e criando uma dataset view. Entendendo como trabalhar com as cardinalidades. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
 partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
@@ -132,6 +134,7 @@ Delete multiple model instances: [Documentação Oficial](https://docs.djangopro
 Update multiple model instances: [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update). \
 Create multiple model instances: [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create). \
 Django Admin Site Configuração: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/). \
+Build-in class based views: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/). \
 
 
 ## COMANDOS DJANGO IMPORTANTES

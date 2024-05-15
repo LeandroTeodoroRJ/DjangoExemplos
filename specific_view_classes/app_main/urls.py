@@ -4,7 +4,10 @@ from django.urls import path
 from app_main import views      #Importação das funções da view do app
 
 urlpatterns = [
-    path('', views.HomeView.as_view()),  #Carrega a função home que está dentro de view
+    path('', views.ReviewView.as_view()),  #Carrega a função home que está dentro de view
+    path('thank-you', views.ThankYouView.as_view()),
+    path('reviews', views.ReviewListView.as_view()),
+    path('reviews/<int:pk>', views.SingleReviewView.as_view()),
 ]
 
 """

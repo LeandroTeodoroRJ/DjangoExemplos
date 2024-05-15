@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from django.views import View
+from django.views.generic.base import TemplateView
 
 # Create your views here.
-def home(request):
-    return render(request, 'app_main/pages/home.html')     #Função para chamada de um arquivo html, note o caminho
-                                                           #que tem como base a pasta template.
-
+class HomeView(TemplateView):  #Render template for GET request
+    template_name = "app_main/pages/home.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+#        context["<template_var>"] = <value>    #Variáveis internas do html
+        return context

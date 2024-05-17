@@ -1,0 +1,5 @@
+****** NOTAS DO PROJETO *******
+
+profiles/.../create_profile.html
+enctype="multipart/form-data"
+    --Informa ao browser que será enviado um arquivo.

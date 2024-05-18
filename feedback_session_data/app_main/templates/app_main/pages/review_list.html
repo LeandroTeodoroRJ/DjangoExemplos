@@ -1,0 +1,18 @@
+{% extends "app_main/pages/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+All Reviews
+{% endblock %}
+
+{% block css_style %}
+{% endblock %}
+
+{% block content %}   {# body content #}
+    <ul>
+        {% for i in review_template %}
+            <li>{{ i.user_name }} (Rating: {{ i.rating }})</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

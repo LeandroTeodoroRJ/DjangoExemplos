@@ -1,0 +1,23 @@
+{% extends "app_main/pages/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+Review Details
+{% endblock %}
+
+{% block css_style %}
+{% endblock %}
+
+{% block content %}   {# body content #}
+    <h1>Author: {{ review_template.user_name }}</h1>
+    <h2>Rating: {{ review_template.rating }}</h2>
+    <p>Comments: {{ review_template.review_text }}</p>
+    {% if is_favorite == True %}
+        <h4>This my Favorite</h4>
+    {% endif %}
+    <form action="/review/favorite" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="review_id" value="{{ review_template.id }}">
+        <button>Favorite</button>
+    </form>
+{% endblock %}

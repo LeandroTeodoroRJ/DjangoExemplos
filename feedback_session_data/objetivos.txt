@@ -1,0 +1,4 @@
+****** STORING SESSION DATA ******
+
+Leia:
+pjt_main/settings.py

@@ -80,6 +80,20 @@ tópicos de cada exemplo.
 8 - Editar arquivo app/views.py \
 9 - Checar com startrunserver
 
+## SUGESTÃO ESTRUTURAÇÃO DE UM PROJETO
+Para facilitar o processo de criação de um projeto de pequeno ou médio porte,
+segue uma sugestão de sequência: \
+* Levantamento dos requisitos;
+* Escolha do template base e UX;
+* Criação do modelo de entidade e relacionamento de classes;
+* Criação dos modelos no models.py;
+* Inserção de poucos registros pelo módulo admin;
+* Criação das views de listagem e exibição;
+* Criação dos formulários baseados nos models em forms.py;
+* Criação das views de inserção de novos registros e edição;
+* Criação das views complementares como delete;
+* Testes de validação e deploy.
+
 ## ESTRUTURAS DE ARQUIVO DO PROJETO DJANGO
 ```
 \Pasta Inicial do Projeto

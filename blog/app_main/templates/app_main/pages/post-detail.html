@@ -18,7 +18,7 @@
         {% endfor %}
     </div>
     <article class="">
-        <img src="{% static 'app_main/images/'|add:single_post_template.image_name %}" alt="{{ single_post_template.title }}">
+        <img src="{{ single_post_template.image_name.url }}" alt="{{ single_post_template.title }}">
         <address> By <a href="mailto:{{ single_post_template.author.emial }}">{{ single_post_template.author }}</a></address>
         <div>
             Last updated on <time>{{ single_post_template.date|date:"d M Y" }}</time>
@@ -31,4 +31,20 @@
      {{ single_post_template.content|linebreaks }}
      {# https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#linebreaks #}
 </main>
+
+<div id="comment-form">
+    <h2>Your Comment</h2>
+    <form action="{% url "post-detail-page" single_post_template.slug %}" method="POST">
+        {% csrf_token %}
+            {% for i in comment_form %}
+                <div class="form-control">
+                    {{ i.label_tag }}
+                    {{ i }}
+                    {{ i.errors }}
+                </div>
+            {% endfor %}
+        <button>Save Comment</button>
+    </form>
+</div>
+
 {% endblock %}

@@ -4,9 +4,9 @@ from django.urls import path
 from app_main import views      #Importação das funções da view do app
 
 urlpatterns = [
-    path('', views.starting_page, name="starting-page"),  #Carrega a função home que está dentro de view
-    path('posts', views.posts, name="posts-page"),
-    path('posts/<slug:slug>', views.post_detail, name="post-detail-page"),
+    path('', views.StartingPageView.as_view(), name="starting-page"),  #Carrega a função home que está dentro de view
+    path('posts', views.AllPostsView.as_view(), name="posts-page"),
+    path('posts/<slug:slug>', views.SinglePostView.as_view(), name="post-detail-page"),
 ]
 
 """

@@ -17,7 +17,7 @@
             <span class="tag">{{ i.caption }}</span>
         {% endfor %}
     </div>
-    <article class="">
+    <article>
         <img src="{{ single_post_template.image_name.url }}" alt="{{ single_post_template.title }}">
         <address> By <a href="mailto:{{ single_post_template.author.emial }}">{{ single_post_template.author }}</a></address>
         <div>
@@ -31,6 +31,17 @@
      {{ single_post_template.content|linebreaks }}
      {# https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#linebreaks #}
 </main>
+
+<section id="comments">
+    <ul>
+        {% for i in comments %}
+            <li>
+                <h4>{{ i.user_name }}</h4>
+                <p>{{ i.text|linebreaks }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
 
 <div id="comment-form">
     <h2>Your Comment</h2>

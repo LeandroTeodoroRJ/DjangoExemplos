@@ -35,7 +35,8 @@ class SinglePostView(View):
         context = {
             "single_post_template": post,
             "post_tags": post.tags.all(),
-            "comment_form": CommentForm()
+            "comment_form": CommentForm(),
+            "comments": post.comments.all().order_by("-id")
         }
         return render(request, "app_main/pages/post-detail.html", context)
 
@@ -52,7 +53,8 @@ class SinglePostView(View):
             context = {
                 "single_post_template": post,
                 "post_tags": post.tags.all(),
-                "comment_form": comment_form
+                "comment_form": comment_form,
+                "comments": post.comments.all().order_by("-id")
             }
             return render(reuqest, "app_main/pages/post-detail.html", context)
 

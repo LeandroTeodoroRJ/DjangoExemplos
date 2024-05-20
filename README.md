@@ -80,9 +80,9 @@ tópicos de cada exemplo.
 8 - Editar arquivo app/views.py \
 9 - Checar com startrunserver
 
-## SUGESTÃO ESTRUTURAÇÃO DE UM PROJETO
+## SUGESTÃO DE ESTRUTURAÇÃO DE UM PROJETO
 Para facilitar o processo de criação de um projeto de pequeno ou médio porte,
-segue uma sugestão de sequência: \
+segue uma sugestão de sequência:
 * Levantamento dos requisitos;
 * Escolha do template base e UX;
 * Criação do modelo de entidade e relacionamento de classes;

@@ -64,6 +64,7 @@ specific_view_classes  ::  Utilizando classes específicas do django para as vie
 feedback_session_data  :: Como armazenar dados temporários de sessão do usuário. \
 partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
 blog  ::  Criando um blog. \
+blog_deploy  ::  Realizando o deploy da aplicação. \
 
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos
@@ -92,7 +93,10 @@ segue uma sugestão de sequência:
 * Criação dos formulários baseados nos models em forms.py;
 * Criação das views de inserção de novos registros e edição;
 * Criação das views complementares como delete;
-* Testes de validação e deploy.
+* Testes de validação.
+* Migre o banco de dados para o servidor e faça o update do schema e do superuser.
+* Exporte o requirements.txt
+* Realize o deploy da aplicação.
 
 ## ESTRUTURAS DE ARQUIVO DO PROJETO DJANGO
 ```
@@ -150,7 +154,8 @@ Update multiple model instances: [Documentação Oficial](https://docs.djangopro
 Create multiple model instances: [Documentação Oficial](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create). \
 Django Admin Site Configuração: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/). \
 Build-in class based views: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/topics/class-based-views/generic-display/). \
-Django Upload Files: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/files/uploads/). \
+Django Upload Files: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/ref/files/uploads/).
+Realizando o deploy com o Django: [Documentação Oficial](https://docs.djangoproject.com/en/5.0/howto/deployment/).
 
 
 ## COMANDOS DJANGO IMPORTANTES

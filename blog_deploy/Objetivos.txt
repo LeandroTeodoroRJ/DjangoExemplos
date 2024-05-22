@@ -1,0 +1,37 @@
+****** REALIZANDO O DEPLOY DA APLICAÇÃO *******
+
+-- Leia o arquivo settings.py
+
+1 - Escolha um provedor de serviço, como por exemplo a AWS.
+
+2 - Execute o collectstatic, caso ocorra alguma modificação em um arquivo
+estático, execute novamente. Mantenha um nome diferente para a pasta que
+será coletado os arquivos.
+
+    -- Para aplicações pequenas é possível configurar o django para servir
+    os arquivos estáticos por configuração no arquivo urls.py com a linha:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+3 - Cheque se há alguma alteração nos modelos com os comandos makemigrations
+e migrate.
+
+4 - Defina uma senha forte com o comando createsuperuser, verifique se o
+schema foi criado no arquivo sqlite3.
+
+5 - Veja as dependências do seu projeto criando o arquivo requirements.txt
+com o comando:
+$python3 -m pip freeze > requirements.txt
+
+    -- Você pode instalar os pacotes em uma nova máquina virtual com:
+    $pip install -r requirements.txt
+
+    -- Em provedores web django, a interface procurará o arquivo requirements.txt
+    para realizar a instalação de forma automática.
+
+6 - Edite a lista ALLOWED_HOSTS no arquivo settings.py com as variáveis
+do provedor de serviço.
+
+7 - A pasta .ebextensions é referente ao deploy com o Elastic Beanstalk (AWS)
+
+    -- O arquivo code.zip contém os arquivos e pastas para upload no AWS
+    utilizando o Elastic Beanstalk

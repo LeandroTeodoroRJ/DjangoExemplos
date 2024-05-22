@@ -1,8 +1,0 @@
-****** BOILLERPLATE PARA PROJETOS PYTHON-DJANGO *******
-
-
-ESTRUTURAS DE ARQUIVO DO PROJETO DJANGO
-    >> Veja em README.md deste repositório
-
-ROTEIRO CRIAÇÃO DE PROJETO
-    >> Veja em README.md deste repositório

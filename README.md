@@ -65,6 +65,7 @@ feedback_session_data  :: Como armazenar dados temporários de sessão do usuár
 partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arquivos estáticos, partials snipets, dummy data, lógica dos views. \
 blog  ::  Criando um blog. \
 blog_deploy  ::  Realizando o deploy da aplicação. \
+minimalist  ::  Projeto de um template minimalista com django. \
 
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos

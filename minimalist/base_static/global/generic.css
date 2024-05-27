@@ -1,0 +1,177 @@
+/* Definições de estilo genéricas para classes de CSS - Ver-1.0 */
+
+/*
+**  rox - Responsive overflow x
+**  Insere barra de rolagem horizontal se o elemento ultrapassar a tela (eixo x).
+**
+**  roy - Responsive overflow y
+**  Insere barra de rolagem horizontal se o elemento ultrapassar a tela (eixo y).
+**
+**  ceb - Center element block
+**  Alinha o box-model ao centro da tela
+**
+**  pfx - Position fixed
+**  Deixa o elemento fixo na tela.
+**
+**  dbk - Display block
+**
+**  bb - Border-box
+**  Inlcui o padding e a borda no content size
+**
+**  br15x - Border radius 15px (br10x)
+**
+**  w25 - Largura de 25%
+**
+**  p20x - Padding de 20px
+**
+**  pt10x - Padding top de 20px
+**
+**  mt10x - Margin top de 10px
+**
+**  mb10x - Margin bottom de 10px
+**
+**  ml10x - Margin letf de 10px
+**
+**  mr10x - Margin right de 10px
+**
+**  str - Soft transition
+**  Efeito de transição de 300ms para todos os eventos.
+**
+**  sbs - Scroll behavior smooth
+**  Rolagem lenta para link âncora
+**
+**  rst - Margin e padding full reset
+**  Zera a margin e o padding.
+**
+**  fit - Fonte em itálico.
+**
+**  fbd - Fonte em negrito.
+**
+**  ft62 - Tamanho da fonte 62.5%.
+**
+**  fdr - Direção do texto da direita para esquerda.
+**
+**  fac - Texto alinhado ao centro.
+**
+**  far - Texto alinhado a direita.
+**
+**  ftu - Fonte em maiúsculo.
+**
+**  tdn - Text decoration none
+**  Retira a linha de decoração dos links.
+**
+**
+*/
+
+
+.rox{
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.roy{
+    max-width: 100%;
+    overflow-y: auto;
+}
+
+.ceb{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pfx{
+    position: fixed;
+}
+
+.dbk{
+    display: block;
+}
+
+.bb{
+    box-sizing: border-box;
+}
+
+.br15x{
+    border-radius: 15px;
+}
+
+.br10x{
+    border-radius: 10px;
+}
+
+.w25{
+    width: 25%;
+}
+
+.p20x{
+    padding: 20px;
+}
+
+.pt10x{
+    padding-top: 10px;
+}
+
+.pt20x{
+    padding-top: 20px;
+}
+
+.mt10x{
+    margin-top: 10px;
+}
+
+.mb10x{
+    margin-bottom: 10px;
+}
+
+.ml10x{
+    margin-left: 10px;
+}
+
+.mr10x{
+    margin-right: 10px;
+}
+
+.str{
+    transition: all 300ms ease-in-out;
+}
+
+.sbs{
+    scroll-behavior: smooth;
+}
+
+.rst * {
+    margin: 0;
+    padding: 0;
+}
+
+.fit{
+    font-style: italic;
+}
+
+.fbd{
+    font-weight: bold;
+}
+
+.ft62{
+    font-size: 62.5%;
+}
+
+.fdr{
+    direction: rtl;
+}
+
+.fac{
+    text-align: center;
+}
+
+.far{
+    text-align: right;
+}
+
+.ftu{
+    text-transform: uppercase;
+}
+
+.tdn{
+    text-decoration: none;
+}

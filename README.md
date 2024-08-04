@@ -66,6 +66,8 @@ partial_blog_project  ::  Primeira parte do projeto do site blog: templates, arq
 blog  ::  Criando um blog. \
 blog_deploy  ::  Realizando o deploy da aplicação. \
 minimalist  ::  Projeto de um template minimalista com django. \
+autenticar_usuario_simples  ::  Cadastrando e autenticando usuários. \
+autenticar_com_bootstrap  ::  Cadastrando usuários e utilizando o bootstrap para config. de estilo. \
 
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos

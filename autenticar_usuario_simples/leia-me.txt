@@ -1,0 +1,13 @@
+****** AUTEHTICAÇÃO SIMPLES PARA USUÁRIOS NO DJANGO *******
+
+-- Link da documentação:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+
+Veja os arquivos:
+-- settings.py
+-- urls.py
+-- app_main/urls.py
+
+--Referência:
+https://www.youtube.com/watch?v=ZqckdX-tkEg&list=PLHO6Od8AxhZplx4hVXdGGYKFHYlilweI5&index=10
+    https://github.com/opencodigos/DjangoAutenticacaoSimples/blob/main/core/urls.py

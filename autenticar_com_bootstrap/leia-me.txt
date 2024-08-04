@@ -1,0 +1,20 @@
+****** AUTENTICAÇÃO SIMPLES PARA USUÁRIOS NO DJANGO *******
+*********** UTILIZANDO A BIBLIOTECA BOOTSTRAP **********
+
+-- Link da documentação:
+    https://docs.djangoproject.com/en/5.0/topics/auth/default/
+
+-- Link BOOTSTRAP (Versão 5.3.3)
+    https://getbootstrap.com/
+
+    Documentação:
+    https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+Veja os arquivos:
+-- settings.py
+-- urls.py
+-- app_main/urls.py
+
+--Referência:
+https://www.youtube.com/watch?v=ZqckdX-tkEg&list=PLHO6Od8AxhZplx4hVXdGGYKFHYlilweI5&index=10
+    https://github.com/opencodigos/DjangoAutenticacaoSimples/blob/main/core/urls.py

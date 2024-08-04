@@ -1,0 +1,32 @@
+{% extends "global/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+Login Page
+{% endblock %}
+
+{% block css_style %}
+    <!--Tag link para o arquivo estático, note que não há a tag style -->
+{% endblock %}
+
+{% block content %}   {# body content #}
+<div class="col-md-4">
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="id_username">Usuário:</label>
+            <input type="text" name="username">
+        </div>
+
+        <div class="mb-3">
+            <label for="id_password">Senha:</label>
+            <input type="password" name="password">
+        </div>
+
+        <button class="btn btn-warning" type="submit">Entrar</button>
+    </form>
+    <a href="{% url 'password_reset' %}">Esqueci minha senha</a>
+</div>
+
+{% endblock %}

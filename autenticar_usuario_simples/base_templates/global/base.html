@@ -1,0 +1,64 @@
+{% load static  %}  {# load global static file #}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> {% block page_title %}{% endblock %}</title>
+
+        <!--Tag link para o arquivo estático, note que não há a tag style -->
+        <link rel="stylesheet" href="{% static 'global/generic.css' %}"> {# global css file is loaded #}
+        <link rel="stylesheet" href="{% static 'global/base_style.css' %}"> {# global css file is loaded #}
+        {% block css_style %}
+        {% endblock %}
+    </head>
+    <body class="main">
+        <header>
+            <div class="logo">
+                <h1>My Project Name</h1>
+            </div>
+            <nav class="navigation">
+                <div class="button-container br10x"><a href="#" class="tdn nav-button">Home</a></div>
+                <div class="button-container br10x"><a href="#" class="tdn nav-button">About</a></div>
+
+                <div class="button-container br10x"><a href="{% url 'login' %}" class="tdn nav-button">Entrar</a></div>
+                <div class="button-container br10x"><a href="{% url 'register' %}" class="tdn nav-button">Registrar</a></div>
+
+                <div class="button-container br10x" style="margin-left: auto; margin-right: 10px;">
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button
+                        style="
+                        background: none;
+                        font-size: 1em;
+                        padding-bottom: 1px;
+                        border: none;"
+                        type="submit">Sair</button>
+                    </form>
+                </div>
+
+
+            </nav>
+        </header>
+        <main class="main-content">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <div>
+
+                <div >
+		            {% if user.is_authenticated %}
+			        <h1>Olá, {{user.username}}</h1>
+		            {% endif %}
+	           </div>
+
+                <h4>This is import informations:</h4>
+                <p>My Company Name</p>
+                <p>Adress: St National, number 12598 </p>
+                <p>Your Country - and city.</p>
+                <p>Your Company Phone Number and more Contacts</p>
+            </div>
+        </footer>
+    </body>
+</html>

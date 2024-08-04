@@ -1,0 +1,23 @@
+{% extends "global/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+Register
+{% endblock %}
+
+{% block css_style %}
+    <!--Tag link para o arquivo estático, note que não há a tag style -->
+{% endblock %}
+
+{% block content %}   {# body content #}
+
+<div>
+    <h4>Criar uma conta</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrar</button>
+    </form>
+</div>
+
+{% endblock %}

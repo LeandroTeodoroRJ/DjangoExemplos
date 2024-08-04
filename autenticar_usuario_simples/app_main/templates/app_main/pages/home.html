@@ -1,0 +1,27 @@
+{% extends "global/base.html" %}  {# global main template is load #}
+{% load static  %}
+
+{% block page_title %}
+Python-Django
+{% endblock %}
+
+{% block css_style %}
+    <!--Tag link para o arquivo estático, note que não há a tag style -->
+    <link rel="stylesheet" href="{% static 'app_main/css/home.css' %}"> {# local css file is loaded #}
+{% endblock %}
+
+{% block content %}   {# body content #}
+
+
+
+    <h1>Django Framework - Home</h1>
+    <br>
+    <p>Lorem ipsum dolor sit amet. Id illum molestias aut quaerat repellat At
+        dolores nobis vel odit voluptatem ut earum dolores. Qui omnis distinctio
+        ex voluptatem nihil in porro voluptate aut aliquam minima ea vero
+        possimus ea itaque voluptate. Ea architecto omnis qui repudiandae
+        laboriosam aut error nemo At possimus similique eum ipsum autem.
+        Aut deserunt quam ut quaerat rerum est voluptatem cumque nam soluta
+        dolores ut quos iste sed quia culpa.</p> <br>
+
+{% endblock %}

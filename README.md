@@ -54,6 +54,7 @@ list_with_for_tag  :: Iterando listas com a tag for do Django. \
 if_statement  ::  Utilizando o if com código html. \
 monthly_challenges  ::  Aplicação com as estruturas básicas de html e url dinâmicas, principais tags, herança de template e arquivos estáticos. \
 models  ::  Entendendo sobre os modelos do Django. \
+meetups_image_upload  ::  Realizando upload de imagens. \
 models_nav  ::  Criando uma navegação entre os registros do modelo. \
 book_store  ::  Implementação de um model no django, django shell, executando queries e criando uma dataset view. Entendendo como trabalhar com as cardinalidades. \
 formulario  ::  Criando um formulario para registro utilizando os models. \
@@ -68,6 +69,7 @@ blog_deploy  ::  Realizando o deploy da aplicação. \
 minimalist  ::  Projeto de um template minimalista com django. \
 autenticar_usuario_simples  ::  Cadastrando e autenticando usuários. \
 autenticar_com_bootstrap  ::  Cadastrando usuários e utilizando o bootstrap para config. de estilo. \
+meetups_project  ::  Projeto meetups completo. \
 
 
 OBS: Ler o arquivo 'objetivos.txt' de cada projeto para um resumo dos

@@ -1,0 +1,77 @@
+{% load static  %}  {# load global static file #}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> {% block page_title %}{% endblock %}</title>
+
+        <!--Tag link para o arquivo estático, note que não há a tag style -->
+        {# global css bootstrap files version 5.3.3 #}
+        <link href="{% static 'global/bootstrap.min.css' %}" rel="stylesheet">
+        <script src="{% static 'global/bootstrap.bundle.min.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'global/generic.css' %}"> {# global css file is loaded #}
+        <link rel="stylesheet" href="{% static 'global/base_style.css' %}"> {# global css file is loaded #}
+
+        {% block css_style %}
+        {% endblock %}
+    </head>
+    <body class="main">
+        <header>
+
+            <!-- Bootstrap nav bar -->
+            <div class="container" id="nav-container"> <!-- Ajusta o container para um tamanho específico -->
+                <nav class="navbar navbar-expand-lg fixed-top"> <!-- Barra fixa no topo -->
+
+                    <!-- Imagem logo tamanho 120 x 85px -->
+                    <a id="logo" href="/" class="navbar-brand"> <img src="{% static 'global/img/logo.png' %}" alt="ABC-Softhouse"> ABC-Softhouse </a>
+
+                    <!-- Botão somente para mobile -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Links do navbar  -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="home-menu" href="/">Home</span></a>
+                        <a class="nav-item nav-link" id="about-menu" href="#">Sobre</a>
+                        {% if not user.is_authenticated %}
+                        <a class="nav-item nav-link" id="services-menu" href="{% url 'login' %}">Entrar</a>
+                        <a class="nav-item nav-link" id="team-menu" href="{% url 'register' %}">Registrar</a>
+                        {% endif %}
+                      </div>
+                      {% if user.is_authenticated %}
+                      <form id="exit" method="post" action="{% url 'logout' %}">
+                          {% csrf_token %}
+                          <button type="submit" class="btn btn-warning">Sair</button>
+                      </form>
+                      {% endif %}
+                  </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <div>
+
+                <div >
+		            {% if user.is_authenticated %}
+			        <h1>Olá, {{user.username}}</h1>
+		            {% endif %}
+	           </div>
+
+                <h4>This is import informations:</h4>
+                <p>My Company Name</p>
+                <p>Adress: St National, number 12598 </p>
+                <p>Your Country - and city.</p>
+                <p>Your Company Phone Number and more Contacts</p>
+            </div>
+        </footer>
+    </body>
+</html>

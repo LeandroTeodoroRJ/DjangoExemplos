@@ -1,0 +1,88 @@
+:root{
+    --color-primary:   #8db9ca;
+    --color-secondary: #002663;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-debug: #cce5ff;
+    --color-error: #da525d;
+    --font-primary: sans-serif;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main{
+    font-family: var(--font-primary);
+    color: var(--color-black);
+}
+
+.main-content{
+    padding: 20px;
+    padding-top: 120px;
+}
+
+/* Definições da row do bootstrap */
+.row {
+  margin: 0;
+}
+
+.container {
+  padding: 70px 0;
+}
+
+li {
+  color: #444;
+  font-size: 14px;
+}
+
+/* Barra de navegação */
+header, .navbar {
+  background-color: var(--color-secondary); /* var(--color-secondary) */
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#logo {
+  width: 75px;
+}
+
+.navbar-brand {
+  padding: 0;
+  color: var(--color-white);
+}
+
+.navbar-brand:hover {
+  color: var(--color-white);
+}
+
+#navbar-links a {
+  color: var(--color-white);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid var(--color-white);
+}
+
+#exit {
+    padding-right: 10px;
+}
+
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    height: 15rem;
+    padding-top: 20px;
+    padding-left: 10px;
+}
